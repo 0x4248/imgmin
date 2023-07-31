@@ -10,6 +10,7 @@ from PIL import Image
 
 __all__ = ["minify_image", "generate_minified_images"]
 
+
 def minify_image(image_path, times=2):
     """Minifies an image by a certain amount of times
     It will take in the input of the image and output name.min.extension
@@ -30,8 +31,9 @@ def minify_image(image_path, times=2):
     image = image.resize(new_size)
 
     image.save(f"{os.path.splitext(image_path)[0]}.min{image_extension}")
-    
+
     return f"{os.path.splitext(image_path)[0]}.min{image_extension}"
+
 
 def generate_minified_images(image_path):
     """Generates 4 minified images from the original image
@@ -65,4 +67,9 @@ def generate_minified_images(image_path):
     image_3.save(f"{os.path.splitext(image_path)[0]}.min3{image_extension}")
     image_4.save(f"{os.path.splitext(image_path)[0]}.min4{image_extension}")
 
-    return [f"{os.path.splitext(image_path)[0]}.min1{image_extension}", f"{os.path.splitext(image_path)[0]}.min2{image_extension}", f"{os.path.splitext(image_path)[0]}.min3{image_extension}", f"{os.path.splitext(image_path)[0]}.min4{image_extension}"]
+    return [
+        f"{os.path.splitext(image_path)[0]}.min1{image_extension}",
+        f"{os.path.splitext(image_path)[0]}.min2{image_extension}",
+        f"{os.path.splitext(image_path)[0]}.min3{image_extension}",
+        f"{os.path.splitext(image_path)[0]}.min4{image_extension}",
+    ]
