@@ -14,10 +14,10 @@ def minify_image(image_path, times=2):
     It will take in the input of the image and output name.min.extension
 
     Args:
-        image_path (str): the path to the image
+        image_path (str): The path to the image
         times (int, optional): How many times to shrink the image. e.g if 2 then output will be 2 times smaller. Defaults to 2.
     Returns:
-        str: the path to the minified image
+        str: The path to the minified image
     """
     image_name = os.path.basename(image_path)
     image_extension = os.path.splitext(image_name)[1]
@@ -40,9 +40,9 @@ def generate_minified_images(image_path):
     3. 6x smaller
     4. 8x smaller
     Args:
-        image_path (str): the path to the image
+        image_path (str): The path to the image
     Returns:
-        list: a list of the paths to the minified images
+        list: A list of the paths to the minified images
     """
     image_name = os.path.basename(image_path)
     image_extension = os.path.splitext(image_name)[1]
