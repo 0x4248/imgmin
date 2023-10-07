@@ -7,7 +7,10 @@
 import os
 from PIL import Image
 
-__all__ = ["minify_image", "generate_minified_images"]
+__all__ = [
+    "minify_image", 
+    "generate_minified_images"
+]
 
 def minify_image(image_path, times=2):
     """Minifies an image by a certain amount of times
