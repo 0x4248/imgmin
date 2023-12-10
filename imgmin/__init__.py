@@ -22,17 +22,22 @@ def minify_image(image_path, times=2):
     Returns:
         str: The path to the minified image
     """
+    # Get the name and extension of the image
     image_name = os.path.basename(image_path)
     image_extension = os.path.splitext(image_name)[1]
 
+    # Open the image and get the size
     image = Image.open(image_path)
     image_size = image.size
 
+    # Create the new size
     new_size = (image_size[0] // times, image_size[1] // times)
     image = image.resize(new_size)
 
+    # Save the image
     image.save(f"{os.path.splitext(image_path)[0]}.min{image_extension}")
 
+    # Return the path to the image
     return f"{os.path.splitext(image_path)[0]}.min{image_extension}"
 
 
@@ -47,27 +52,33 @@ def generate_minified_images(image_path):
     Returns:
         list: A list of the paths to the minified images
     """
+    # Get the name and extension of the image
     image_name = os.path.basename(image_path)
     image_extension = os.path.splitext(image_name)[1]
 
+    # Open the image and get the size
     image = Image.open(image_path)
     image_size = image.size
 
+    # Create the new sizes
     new_size_1 = (image_size[0] // 2, image_size[1] // 2)
     new_size_2 = (image_size[0] // 4, image_size[1] // 4)
     new_size_3 = (image_size[0] // 6, image_size[1] // 6)
     new_size_4 = (image_size[0] // 8, image_size[1] // 8)
 
+    # Resize the images
     image_1 = image.resize(new_size_1)
     image_2 = image.resize(new_size_2)
     image_3 = image.resize(new_size_3)
     image_4 = image.resize(new_size_4)
 
+    # Save the images
     image_1.save(f"{os.path.splitext(image_path)[0]}.min1{image_extension}")
     image_2.save(f"{os.path.splitext(image_path)[0]}.min2{image_extension}")
     image_3.save(f"{os.path.splitext(image_path)[0]}.min3{image_extension}")
     image_4.save(f"{os.path.splitext(image_path)[0]}.min4{image_extension}")
 
+    # Return the paths to the images
     return [
         f"{os.path.splitext(image_path)[0]}.min1{image_extension}",
         f"{os.path.splitext(image_path)[0]}.min2{image_extension}",
