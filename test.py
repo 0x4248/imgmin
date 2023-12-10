@@ -3,6 +3,8 @@
 # Github: https://www.github.com/lewisevans2007/imgmin
 # License: GNU General Public License v3.0
 # By: Lewis Evans
+#
+# Test script for imgmin that downloads an image and minifies it
 
 import requests
 import imgmin
