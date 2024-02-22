@@ -9,9 +9,11 @@
 import requests
 import imgmin
 
+# Download example image
 url = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/SMPTE_Color_Bars.svg/2560px-SMPTE_Color_Bars.svg.png"
 
 r = requests.get(url, allow_redirects=True)
 open("test.png", "wb").write(r.content)
 
+# Minify the image
 imgmin.generate_minified_images("test.png")
