@@ -9,11 +9,11 @@ A simple api to create minified images
 Minifies an image by a certain amount of times
 It will take in the input of the image and output name.min.extension
 
-#### Args:
+#### Args
 - image_path (str): the path to the image
 - times (int, optional): How many times to shrink the image. e.g if 2 then output will be 2 times smaller. Defaults to 2.
 
-#### Returns:
+#### Returns
 - str: the path to the minified image
 
 ### generate_minified_images
@@ -24,11 +24,11 @@ Generates 4 minified images from the original image
 3. 6x smaller
 4. 8x smaller
 
-#### Args:
+#### Args
 
 - image_path (str): the path to the image
 
-#### Returns:
+#### Returns
 - list: a list of the paths to the minified images
 
 
