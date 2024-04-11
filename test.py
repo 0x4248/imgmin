@@ -1,8 +1,8 @@
 # imgmin
 # A simple api to create minified images
-# Github: https://www.github.com/lewisevans2007/imgmin
+# Github: https://www.github.com/0x4248/imgmin
 # License: GNU General Public License v3.0
-# By: Lewis Evans
+# By: 0x4248
 #
 # Test script for imgmin that downloads an image and minifies it
 
